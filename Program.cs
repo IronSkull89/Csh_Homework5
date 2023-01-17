@@ -80,7 +80,8 @@ int[] MultiplicationOppElements(int[] array)
 
 
 //--------------------------------------------
-while (true)
+string? working = "y";
+while (working.ToLower() == "Y".ToLower())
 {
     Console.Clear();
     task = SelectionTask();
@@ -106,6 +107,12 @@ while (true)
         Console.WriteLine($"Массив состоящий из произведения противоположных элементов массиве: {String.Join(" ", MultiplicationOppElements(array))}");
         Console.WriteLine("*В случае нечётного количества элементов средний возводится в квадрат.");
     }
-    Console.WriteLine("Нажмите Enter для продолжения...");
-    Console.ReadLine();
+    
+    Console.WriteLine("Введите 'Y' для продолжения или любой другой символ для закрытия...");
+
+    working = Console.ReadLine();
+    if (string.IsNullOrWhiteSpace(working))
+    {
+        working = "n";
+    }
 }
