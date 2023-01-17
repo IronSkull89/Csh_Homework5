@@ -94,7 +94,7 @@ while (true)
     else if (task == 2)
     {
         int length = SetLengthArray();
-        int[] array = SetArray(length, 0, 10000);
+        int[] array = SetArray(length, -100, 100);
         Console.WriteLine(String.Join(" ", array));
         Console.WriteLine($"Сумма чисел с нечётным индексом в массиве: {SumOddIndex(array)}");
     }
