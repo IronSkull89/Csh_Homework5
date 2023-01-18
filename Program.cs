@@ -44,7 +44,7 @@ int CountEven(int[] array)
     int count = 0;
     foreach (int item in array)
     {
-        if (item % 2 != 0) count++;
+        if (item % 2 == 0) count++;
     }
     return count;
 }
